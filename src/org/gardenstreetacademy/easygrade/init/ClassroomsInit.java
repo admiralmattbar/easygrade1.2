@@ -1,12 +1,12 @@
 package org.gardenstreetacademy.easygrade.init;
 
-import org.gardenstreetacademy.easygrade.classroom.Classroom;
+import org.gardenstreetacademy.easygrade.classitems.Classroom;
 
 import java.util.*;
 
 public class ClassroomsInit
 {
-    private static ArrayList<Classroom> classes = new ArrayList<Classroom>();
+    public static ArrayList<Classroom> classes = new ArrayList<Classroom>();
 
     public static ArrayList<Classroom> getClassesArray()
     {
@@ -26,20 +26,35 @@ public class ClassroomsInit
     public static void addClassToArray(Classroom c)
     {
         classes.add(c);
+        c.setUniqueNum(classes.indexOf(c));
     }
 
     public static void classAdder()
     {
         Scanner readerName = new Scanner(System.in);
+
         System.out.println("Enter class name.");
-        String className = readerName.nextLine();
+
+        String className = null;
+        if(readerName.hasNextLine()) className = readerName.nextLine();
+
         Scanner readerPeriod = new Scanner(System.in);
         System.out.println("Enter class period.");
-        int per = readerPeriod.nextInt();
-        readerName.close();
-        readerPeriod.close();
+        int per = 0;
+        per = readerPeriod.nextInt();
 
-        new Classroom(className, per);
+
+
+
+        if (className != null && !className.equals("")) {
+
+            new Classroom(className, per, null); //TODO: handle teacher name in this function.
+        } else {
+            System.out.println("Please give your new classitems a name.");
+            readerName.nextLine();
+            classAdder();
+        }
+
     }
 
     public static ArrayList<Classroom> findClassByName(String name)
@@ -49,7 +64,7 @@ public class ClassroomsInit
         int i;
         for(i=0; i<classes.size(); i++) {
         //for(Classroom c : classes){
-            if(classes.get(i).getClassName() == name){
+            if(classes.get(i).getClassName().equals(name)){
                 classWithName.add(classes.get(i));
             }
         }

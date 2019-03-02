@@ -1,37 +1,25 @@
 package org.gardenstreetacademy.easygrade;
 
-import org.gardenstreetacademy.easygrade.classroom.Classroom;
-import org.gardenstreetacademy.easygrade.init.ClassroomsInit;
+import org.gardenstreetacademy.easygrade.classitems.Classroom;
+import org.gardenstreetacademy.easygrade.init.AssignmentInit;
 
 public class Main
 {
 
     public static void main(String args[])
     {
-        Classroom algebra = new Classroom("Algebra", 4);
-        Classroom world_history = new Classroom("World History", 1);
 
-        ClassroomsInit.classAdder();
+        Classroom algebra = new Classroom("Algebra", 4, "Matt");
+        Classroom world_history = new Classroom("World History", 1, "Matt");
+        Classroom world_history2 = new Classroom("World History", 2, "Matt");
+        Classroom government = new Classroom("Government", 4, "Matt");
 
-        ClassroomsInit.sortClassesByName();
+        AssignmentInit.addAssignmentToAllClassesByName();
 
-        for(Classroom c : ClassroomsInit.getClassesArray()){
-            System.out.println(c.getClassName());
-        }
+        world_history.printAssignmentsForClass();
+        world_history2.printAssignmentsForClass();
 
-        ClassroomsInit.sortClassesByPeriod();
 
-        for(Classroom c : ClassroomsInit.getClassesArray()){
-            System.out.println(c.getClassPeriod() + ". " + c.getClassName());
-        }
-
-        for(Classroom c : ClassroomsInit.findClassByName("World History")){
-            System.out.println(c.getClassPeriod() + ". " + c.getClassName());
-        }
-
-        System.out.println(ClassroomsInit.findClassByName("World History").size());
-
-        //ClassroomsInit.printClassesWithName("World History");
 
     }
 
