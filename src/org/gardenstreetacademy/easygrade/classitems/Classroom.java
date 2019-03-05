@@ -1,6 +1,7 @@
 package org.gardenstreetacademy.easygrade.classitems;
 
 import org.gardenstreetacademy.easygrade.init.ClassroomsInit;
+import org.gardenstreetacademy.easygrade.init.TeacherInit;
 import org.gardenstreetacademy.easygrade.people.Teacher;
 import org.gardenstreetacademy.easygrade.util.DataManager;
 
@@ -21,6 +22,21 @@ public class Classroom
         this.class_name = name;
         this. class_period = period;
         this.teacher = teacher;
+
+        if(DataManager.isTeacherFreePeriodFlag(this)) {
+            ClassroomsInit.addClassToArray(this);
+        } else {
+            System.out.println("This teacher is booked that period in another class. Please try again.");
+            this.equals(null);
+        }
+    }
+
+    public Classroom(String name, int period, String teacher)
+    {
+        this.class_name = name;
+        this. class_period = period;
+        this.teacher = TeacherInit.getTeacherObjectFromName(teacher);
+
 
         if(DataManager.isTeacherFreePeriodFlag(this)) {
             ClassroomsInit.addClassToArray(this);

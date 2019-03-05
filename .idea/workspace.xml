@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="585a0336-fc2e-40a5-aa31-a018c3a5e16b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classitems/Assignment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classitems/Classroom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/AssignmentInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/TeacherInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/people/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/util/DataManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/easygrade1.2/org/gardenstreetacademy/easygrade/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/easygrade1.2/org/gardenstreetacademy/easygrade/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/easygrade1.2/org/gardenstreetacademy/easygrade/classroom/Classroom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/easygrade1.2/org/gardenstreetacademy/easygrade/classroom/Classroom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/easygrade1.2/org/gardenstreetacademy/easygrade/init/ClassroomsInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/easygrade1.2/org/gardenstreetacademy/easygrade/init/ClassroomsInit.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classroom/Classroom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classitems/Classroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classitems/Classroom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/AssignmentInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/AssignmentInit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/ClassroomsInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/ClassroomsInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/TeacherInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/TeacherInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/people/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/people/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/util/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/util/DataManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+            <state relative-caret-position="157">
+              <caret line="20" column="71" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,17 +35,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classitems/Classroom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="23" column="55" lean-forward="true" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+            <state relative-caret-position="169">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#335#347#0" expanded="true" />
-                <element signature="e#959#960#0" expanded="true" />
-                <element signature="e#1032#1033#0" expanded="true" />
-                <element signature="e#917#918#0" expanded="true" />
-                <element signature="e#952#953#0" expanded="true" />
-                <element signature="e#1971#1972#0" expanded="true" />
-                <element signature="e#2310#2311#0" expanded="true" />
+                <element signature="e#1571#1572#0" expanded="true" />
+                <element signature="e#1644#1645#0" expanded="true" />
+                <element signature="e#1895#1896#0" expanded="true" />
+                <element signature="e#1930#1931#0" expanded="true" />
+                <element signature="e#2583#2584#0" expanded="true" />
+                <element signature="e#2943#2944#0" expanded="true" />
+                <element signature="e#3012#3013#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,13 +54,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/ClassroomsInit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="540">
+              <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#225#236#0" expanded="true" />
-                <element signature="e#302#303#0" expanded="true" />
-                <element signature="e#332#333#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,28 +66,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/people/Teacher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="220">
+              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
               <folding>
-                <element signature="e#177#178#0" expanded="true" />
-                <element signature="e#209#210#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#325#336#0" expanded="true" />
+                <element signature="e#250#251#0" expanded="true" />
                 <element signature="e#277#278#0" expanded="true" />
-                <element signature="e#304#305#0" expanded="true" />
+                <element signature="e#577#578#0" expanded="true" />
+                <element signature="e#615#616#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/TeacherInit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state relative-caret-position="267">
+              <caret line="78" column="63" selection-start-line="78" selection-start-column="63" selection-end-line="78" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#230#239#0" expanded="true" />
-                <element signature="e#296#297#0" expanded="true" />
-                <element signature="e#327#328#0" expanded="true" />
+                <element signature="e#314#315#0" expanded="true" />
+                <element signature="e#345#346#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,15 +97,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/AssignmentInit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+            <state relative-caret-position="645">
+              <caret line="70" column="6" lean-forward="true" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#245#257#0" expanded="true" />
-                <element signature="e#327#328#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
-                <element signature="e#2262#2274#0" expanded="true" />
-                <element signature="e#2604#2616#0" expanded="true" />
+                <element signature="e#2570#2582#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,12 +110,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classitems/Assignment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
+            <state relative-caret-position="315">
               <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#444#445#0" expanded="true" />
-                <element signature="e#479#480#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/util/DataManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="165">
+              <caret line="11" column="135" selection-start-line="11" selection-start-column="135" selection-end-line="11" selection-end-column="135" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,7 +134,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Scanner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
+            <state relative-caret-position="29985">
               <caret line="2075" selection-start-line="2075" selection-end-line="2075" />
               <folding>
                 <element signature="e#78050#78051#0" expanded="true" />
@@ -173,20 +159,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classroom/Assignment.java" />
-        <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/AssignmentInit.java" />
-        <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/Main.java" />
-        <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/util/DataManager.java" />
         <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classroom/Classroom.java" />
-        <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/ClassroomsInit.java" />
         <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/schoolobjects/Teacher.java" />
         <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classitems/Teacher.java" />
-        <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classitems/Classroom.java" />
+        <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/ClassroomsInit.java" />
+        <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/AssignmentInit.java" />
+        <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/util/DataManager.java" />
         <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/people/Teacher.java" />
+        <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classitems/Classroom.java" />
+        <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/Main.java" />
         <option value="$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/TeacherInit.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="17" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="709" />
@@ -197,8 +184,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,10 +234,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551485646854" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551485813528" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -312,7 +299,7 @@
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2358643" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23909532" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -322,8 +309,8 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32901135" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32901135" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38897893" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3987034" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32901135" />
@@ -344,7 +331,7 @@
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Scanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
+        <state relative-caret-position="29985">
           <caret line="2075" selection-start-line="2075" selection-end-line="2075" />
           <folding>
             <element signature="e#78050#78051#0" expanded="true" />
@@ -352,47 +339,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/AssignmentInit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#245#257#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#2262#2274#0" expanded="true" />
-            <element signature="e#2604#2616#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classitems/Assignment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
+        <state relative-caret-position="315">
           <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/AssignmentInit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+        <state relative-caret-position="645">
+          <caret line="70" column="6" lean-forward="true" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2570#2582#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/util/DataManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        <state relative-caret-position="165">
+          <caret line="11" column="135" selection-start-line="11" selection-start-column="135" selection-end-line="11" selection-end-column="135" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -401,56 +372,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/ClassroomsInit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="540">
+          <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#225#236#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/classitems/Classroom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="23" column="55" lean-forward="true" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+        <state relative-caret-position="169">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#335#347#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#1032#1033#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
-            <element signature="e#1971#1972#0" expanded="true" />
-            <element signature="e#2310#2311#0" expanded="true" />
+            <element signature="e#1571#1572#0" expanded="true" />
+            <element signature="e#1644#1645#0" expanded="true" />
+            <element signature="e#1895#1896#0" expanded="true" />
+            <element signature="e#1930#1931#0" expanded="true" />
+            <element signature="e#2583#2584#0" expanded="true" />
+            <element signature="e#2943#2944#0" expanded="true" />
+            <element signature="e#3012#3013#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/people/Teacher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="220">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
           <folding>
-            <element signature="e#177#178#0" expanded="true" />
-            <element signature="e#209#210#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#325#336#0" expanded="true" />
+            <element signature="e#250#251#0" expanded="true" />
             <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/init/TeacherInit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="267">
+          <caret line="78" column="63" selection-start-line="78" selection-start-column="63" selection-end-line="78" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#230#239#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gardenstreetacademy/easygrade/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="20" column="71" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

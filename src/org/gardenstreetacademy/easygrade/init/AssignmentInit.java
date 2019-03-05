@@ -28,7 +28,7 @@ public class AssignmentInit {
         a.setUniqueNum(assignments.indexOf(a));
     }
 
-    public static void addAssignmentToAllClassesByName()
+    public static void addAssignmentToAllClassesByNameUserInput()
     {
         Scanner readerAssignmentName = new Scanner(System.in);
 
@@ -51,9 +51,21 @@ public class AssignmentInit {
 
         } else {
             System.out.println("Please give your new assignment a name.");
-            addAssignmentToAllClassesByName();
+            addAssignmentToAllClassesByNameUserInput();
         }
 
+    }
+
+    public static void addAssignmentToAllClassesByName(String assignmentName, String className)
+    {
+        if (assignmentName != null && !assignmentName.equals("")) {
+            for (Classroom c : ClassroomsInit.getClassesArray()) {
+                if (c.getClassName().equals(className)) {
+                    new Assignment(assignmentName, c);
+                }
+            }
+
+        }
     }
 
     /*
@@ -82,6 +94,7 @@ public class AssignmentInit {
                 assignmentWithName.add(a);
             }
         }
+
         return assignmentWithName;
     }
 

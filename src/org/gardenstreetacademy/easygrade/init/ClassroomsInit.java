@@ -1,6 +1,7 @@
 package org.gardenstreetacademy.easygrade.init;
 
 import org.gardenstreetacademy.easygrade.classitems.Classroom;
+import org.gardenstreetacademy.easygrade.people.Teacher;
 
 import java.util.*;
 
@@ -39,16 +40,26 @@ public class ClassroomsInit
         if(readerName.hasNextLine()) className = readerName.nextLine();
 
         Scanner readerPeriod = new Scanner(System.in);
+
         System.out.println("Enter class period.");
+
         int per = 0;
         per = readerPeriod.nextInt();
 
+        Scanner readerTeacher = new Scanner(System.in);
 
+        System.out.println("Who is teaching this class?");
 
+        String teacherName = null;
+        if(readerTeacher.hasNextLine()) teacherName = readerTeacher.nextLine();
 
         if (className != null && !className.equals("")) {
 
-            new Classroom(className, per, null); //TODO: handle teacher name in this function.
+            if(teacherName != null && !teacherName.equals("")){
+                new Classroom(className, per, (Teacher) null); //TODO: handle teacher name in this function.
+            }
+
+
         } else {
             System.out.println("Please give your new classitems a name.");
             readerName.nextLine();
