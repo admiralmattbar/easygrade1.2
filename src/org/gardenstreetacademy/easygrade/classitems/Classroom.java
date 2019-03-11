@@ -6,20 +6,19 @@ import org.gardenstreetacademy.easygrade.people.Teacher;
 import org.gardenstreetacademy.easygrade.util.DataManager;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Classroom
+public class Classroom extends ClassItem
 {
 
-    private String class_name;
     private Teacher teacher;
     private int class_period;
-    private int unique_number;
-    private ArrayList<Assignment> assignments_for_class = new ArrayList<Assignment>();
+    private List<Assignment> assignments_for_class = new ArrayList<>();
 
 
     public Classroom(String name, int period, Teacher teacher)
     {
-        this.class_name = name;
+        super(name);
         this. class_period = period;
         this.teacher = teacher;
 
@@ -33,7 +32,7 @@ public class Classroom
 
     public Classroom(String name, int period, String teacher)
     {
-        this.class_name = name;
+        super(name);
         this. class_period = period;
         this.teacher = TeacherInit.getTeacherObjectFromName(teacher);
 
@@ -51,19 +50,16 @@ public class Classroom
         return class_period;
     }
 
-    public String getClassName()
-    {
-        return class_name;
-    }
 
-    public void setUniqueNum(int num){
-        unique_number = num;
+    @Override
+    public void addToArray(ClassItem ci) {
+        ClassroomsInit.addClassToArray(this);
     }
 
     public void addAssignmentToThisClass(Assignment assignment)
     {
         for(Assignment a : this.assignments_for_class){
-            if(a.getAssignmentName().equals(assignment.getAssignmentName())){
+            if(a.getName().equals(assignment.getName())){
                 System.out.println("Already an assignment in this class with this name. Please choose a new, unique assignment name.");
                 return;
             }
@@ -75,23 +71,23 @@ public class Classroom
     {
         Assignment assign = null;
         for(Assignment a : this.assignments_for_class){
-            if(a.getAssignmentName().equals(assignment_name)){
+            if(a.getName().equals(assignment_name)){
                 assign = a;
             }
         }
         return assign;
     }
 
-    public ArrayList<Assignment> getAssignmentsForClass()
+    public List<Assignment> getAssignmentsForClass()
     {
         return assignments_for_class;
     }
 
     public void printAssignmentsForClass()
     {
-        System.out.println(this.class_name + "  Period: " + this.getClassPeriod());
+        System.out.println(this.getName() + "  Period: " + this.getClassPeriod());
         for(Assignment a : this.assignments_for_class){
-            System.out.println("    -" + a.getAssignmentName());
+            System.out.println("    -" + a.getName());
         }
     }
 

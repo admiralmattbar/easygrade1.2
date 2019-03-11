@@ -3,23 +3,20 @@ package org.gardenstreetacademy.easygrade.init;
 import org.gardenstreetacademy.easygrade.classitems.Assignment;
 import org.gardenstreetacademy.easygrade.classitems.Classroom;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class AssignmentInit {
 
-    private static ArrayList<Assignment> assignments = new ArrayList<Assignment>();
+    private static List<Assignment> assignments = new ArrayList<>();
 
-    public static ArrayList<Assignment> getAssignmentsArray()
+    public static List<Assignment> getAssignmentsArray()
     {
         return assignments;
     }
 
     public static void sortAssignmentsByName()
     {
-        Collections.sort(assignments, Comparator.comparing(Assignment::getAssignmentName));
+        Collections.sort(assignments, Comparator.comparing(Assignment::getName));
     }
 
     public static void addAssignmentToArray(Assignment a)
@@ -44,7 +41,7 @@ public class AssignmentInit {
 
         if (assignmentName != null && !assignmentName.equals("")) {
             for(Classroom c : ClassroomsInit.getClassesArray()){
-                if(c.getClassName().equals(className)){
+                if(c.getName().equals(className)){
                     new Assignment(assignmentName, c);
                 }
             }
@@ -60,7 +57,7 @@ public class AssignmentInit {
     {
         if (assignmentName != null && !assignmentName.equals("")) {
             for (Classroom c : ClassroomsInit.getClassesArray()) {
-                if (c.getClassName().equals(className)) {
+                if (c.getName().equals(className)) {
                     new Assignment(assignmentName, c);
                 }
             }
@@ -90,7 +87,7 @@ public class AssignmentInit {
     {
         ArrayList<Assignment> assignmentWithName = new ArrayList<Assignment>();
         for(Assignment a : assignments){
-            if(a.getAssignmentName().equals(name)){
+            if(a.getName().equals(name)){
                 assignmentWithName.add(a);
             }
         }
@@ -103,7 +100,7 @@ public class AssignmentInit {
         ArrayList<Assignment> assignWithName = new ArrayList<Assignment>();
         assignWithName = findAssignmentByName(name);
         for(Assignment a : assignWithName){
-            System.out.println("Period " + a.getAssignmentClass().getClassName() + ".  " + a.getAssignmentName());
+            System.out.println("Period " + a.getAssignmentClass().getName() + ".  " + a.getName());
         }
     }
 }

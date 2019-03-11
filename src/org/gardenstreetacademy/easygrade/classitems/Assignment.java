@@ -2,36 +2,47 @@ package org.gardenstreetacademy.easygrade.classitems;
 
 import org.gardenstreetacademy.easygrade.init.AssignmentInit;
 import org.gardenstreetacademy.easygrade.init.ClassroomsInit;
+import org.gardenstreetacademy.easygrade.people.Teacher;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Assignment {
+public class Assignment extends ClassItem{
 
-    private String assignment_name;
+
     private Classroom assignment_class;
     private int unique_assignment_number;
     private int class_period;
-    ArrayList<Classroom> classWithAssignment;
+    List<Classroom> classWithAssignment;
+    private int total_score;
 
     public Assignment(String name, Classroom classroom)
     {
-        this.assignment_name = name;
+        super(name);
         this.assignment_class = classroom;
-
         classroom.addAssignmentToThisClass(this);
-        AssignmentInit.addAssignmentToArray(this);
     }
 
-    public Assignment(String name, String classname, int period)
+    public Assignment(String name, String classname, int period, Teacher teacher)
     {
-        this.assignment_name = name;
+        super(name);
+        this.class_period = period;
         for(Classroom c : ClassroomsInit.getClassesArray()){
-            if(c.getClassName().equals(classname)){
+            if(c.getName().equals(classname) && c.getClassPeriod() == period && c.getTeacher().equals(teacher)) {
                 c.addAssignmentToThisClass(this);
             }
         }
+    }
 
-        AssignmentInit.addAssignmentToArray(this);
+    public Assignment(String name, String classname, int period, String teachername)
+    {
+        super(name);
+        this.class_period = period;
+        for(Classroom c : ClassroomsInit.getClassesArray()){
+            if(c.getName().equals(classname) && c.getClassPeriod() == period && c.getTeacherName().equals(teachername)) {
+                c.addAssignmentToThisClass(this);
+            }
+        }
     }
 
     public Classroom getAssignmentClass()
@@ -39,12 +50,19 @@ public class Assignment {
         return assignment_class;
     }
 
-    public String getAssignmentName()
-    {
-        return assignment_name;
+    @Override
+    public void addToArray(ClassItem ci) {
+        AssignmentInit.addAssignmentToArray(this);
     }
 
-    public void setUniqueNum(int num){
-        unique_assignment_number = num;
+    public int getTotalScore()
+    {
+        return this.total_score;
     }
+
+    public void setTotalScore(int score)
+    {
+        this.total_score = score;
+    }
+
 }

@@ -4,12 +4,13 @@ import org.gardenstreetacademy.easygrade.classitems.Classroom;
 import org.gardenstreetacademy.easygrade.init.TeacherInit;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Teacher {
+public class Teacher extends PeopleItem {
 
     private String name;
 
-    private ArrayList<Classroom> teachersClasses = new ArrayList<Classroom>();
+    private List<Classroom> teachersClasses = new ArrayList<Classroom>();
 
     public Teacher(String name){
         this.name = name;
@@ -23,7 +24,7 @@ public class Teacher {
         return name;
     }
 
-    public ArrayList<Classroom> getTeachersClasses()
+    public List<Classroom> getTeachersClasses()
     {
         return teachersClasses;
     }

@@ -24,7 +24,7 @@ public class Main
 
 
         for(Assignment a : AssignmentInit.getAssignmentsArray()){
-            System.out.println(a.getAssignmentClass().getClassName() + " Period " + a.getAssignmentClass().getClassPeriod() + ": " + a.getAssignmentName());
+            System.out.println(a.getAssignmentClass().getName() + " Period " + a.getAssignmentClass().getClassPeriod() + ": " + a.getName());
         }
 
         TeacherInit.printTeacherList();

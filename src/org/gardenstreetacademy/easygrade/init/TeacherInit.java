@@ -75,8 +75,8 @@ public class TeacherInit {
             System.out.println("This teacher '" + name + "' does not exist in the system, would you like to add them? (y/n)");
             String userAddTeacher = addTeacherReader.nextLine();
 
-            if(userAddTeacher == "y"){
-                System.out.println("Adding teacher to database.");
+            if(userAddTeacher.equals("y")){
+                System.out.println("Adding teacher '" + name + "' to database.");
                 return new Teacher(name);
 
             }

@@ -7,9 +7,9 @@ import java.util.*;
 
 public class ClassroomsInit
 {
-    public static ArrayList<Classroom> classes = new ArrayList<Classroom>();
+    public static List<Classroom> classes = new ArrayList<>();
 
-    public static ArrayList<Classroom> getClassesArray()
+    public static List<Classroom> getClassesArray()
     {
         return classes;
     }
@@ -21,7 +21,7 @@ public class ClassroomsInit
 
     public static void sortClassesByName()
     {
-        Collections.sort(classes, Comparator.comparing(Classroom::getClassName));
+        Collections.sort(classes, Comparator.comparing(Classroom::getName));
     }
 
     public static void addClassToArray(Classroom c)
@@ -75,7 +75,7 @@ public class ClassroomsInit
         int i;
         for(i=0; i<classes.size(); i++) {
         //for(Classroom c : classes){
-            if(classes.get(i).getClassName().equals(name)){
+            if(classes.get(i).getName().equals(name)){
                 classWithName.add(classes.get(i));
             }
         }
@@ -90,7 +90,7 @@ public class ClassroomsInit
         ArrayList<Classroom> classWithName = new ArrayList<Classroom>();
         classWithName = findClassByName(name);
         for(Classroom c : classWithName){
-            System.out.println("Period " + c.getClassPeriod() + ".  " + c.getClassName());
+            System.out.println("Period " + c.getClassPeriod() + ".  " + c.getName());
         }
     }
 }
