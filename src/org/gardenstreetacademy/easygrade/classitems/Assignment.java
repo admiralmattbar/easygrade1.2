@@ -1,10 +1,9 @@
 package org.gardenstreetacademy.easygrade.classitems;
 
 import org.gardenstreetacademy.easygrade.init.AssignmentInit;
-import org.gardenstreetacademy.easygrade.init.ClassroomsInit;
+import org.gardenstreetacademy.easygrade.init.Classes;
 import org.gardenstreetacademy.easygrade.people.Teacher;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Assignment extends ClassItem{
@@ -27,7 +26,7 @@ public class Assignment extends ClassItem{
     {
         super(name);
         this.class_period = period;
-        for(Classroom c : ClassroomsInit.getClassesArray()){
+        for(Classroom c : Classes.getClassesArray()){
             if(c.getName().equals(classname) && c.getClassPeriod() == period && c.getTeacher().equals(teacher)) {
                 c.addAssignmentToThisClass(this);
             }
@@ -38,7 +37,7 @@ public class Assignment extends ClassItem{
     {
         super(name);
         this.class_period = period;
-        for(Classroom c : ClassroomsInit.getClassesArray()){
+        for(Classroom c : Classes.getClassesArray()){
             if(c.getName().equals(classname) && c.getClassPeriod() == period && c.getTeacherName().equals(teachername)) {
                 c.addAssignmentToThisClass(this);
             }

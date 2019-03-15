@@ -5,7 +5,7 @@ import org.gardenstreetacademy.easygrade.people.Teacher;
 
 import java.util.*;
 
-public class ClassroomsInit
+public class Classes
 {
     public static List<Classroom> classes = new ArrayList<>();
 

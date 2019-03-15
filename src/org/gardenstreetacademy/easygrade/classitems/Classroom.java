@@ -1,7 +1,7 @@
 package org.gardenstreetacademy.easygrade.classitems;
 
-import org.gardenstreetacademy.easygrade.init.ClassroomsInit;
-import org.gardenstreetacademy.easygrade.init.TeacherInit;
+import org.gardenstreetacademy.easygrade.init.Classes;
+import org.gardenstreetacademy.easygrade.init.People;
 import org.gardenstreetacademy.easygrade.people.Teacher;
 import org.gardenstreetacademy.easygrade.util.DataManager;
 
@@ -23,7 +23,7 @@ public class Classroom extends ClassItem
         this.teacher = teacher;
 
         if(DataManager.isTeacherFreePeriodFlag(this)) {
-            ClassroomsInit.addClassToArray(this);
+            Classes.addClassToArray(this);
         } else {
             System.out.println("This teacher is booked that period in another class. Please try again.");
             this.equals(null);
@@ -34,11 +34,11 @@ public class Classroom extends ClassItem
     {
         super(name);
         this. class_period = period;
-        this.teacher = TeacherInit.getTeacherObjectFromName(teacher);
+        this.teacher = People.getTeacherObjectFromName(teacher);
 
 
         if(DataManager.isTeacherFreePeriodFlag(this)) {
-            ClassroomsInit.addClassToArray(this);
+            Classes.addClassToArray(this);
         } else {
             System.out.println("This teacher is booked that period in another class. Please try again.");
             this.equals(null);
@@ -53,7 +53,7 @@ public class Classroom extends ClassItem
 
     @Override
     public void addToArray(ClassItem ci) {
-        ClassroomsInit.addClassToArray(this);
+        Classes.addClassToArray(this);
     }
 
     public void addAssignmentToThisClass(Assignment assignment)
@@ -93,7 +93,7 @@ public class Classroom extends ClassItem
 
     public String getTeacherName()
     {
-        return teacher.getTeacherName();
+        return teacher.getName();
     }
 
     public Teacher getTeacher()

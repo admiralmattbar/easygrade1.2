@@ -1,6 +1,5 @@
 package org.gardenstreetacademy.easygrade.init;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.gardenstreetacademy.easygrade.people.Teacher;
 
 import java.util.ArrayList;
@@ -8,7 +7,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class TeacherInit {
+public class People {
 
     private static ArrayList<Teacher> teachers = new ArrayList<Teacher>();
 
@@ -20,7 +19,7 @@ public class TeacherInit {
     public static void createTeacher(String name)
     {
         for(Teacher t : teachers) {
-            if(t.getTeacherName().equals(name)){
+            if(t.getName().equals(name)){
                 System.out.println("This teacher is already in the system.");
                 return;
             } else {
@@ -33,7 +32,7 @@ public class TeacherInit {
     {
         Boolean inSystem = false;
         for(Teacher t : teachers){
-            if(t.getTeacherName().equals(teacher.getTeacherName())){
+            if(t.getName().equals(teacher.getName())){
                 System.out.println("This teacher already exists in the system.");
                 inSystem = true;
             }
@@ -49,7 +48,7 @@ public class TeacherInit {
 
     public static void sortTeachersByName()
     {
-        Collections.sort(teachers, Comparator.comparing(Teacher::getTeacherName));
+        Collections.sort(teachers, Comparator.comparing(Teacher::getName));
     }
 
 
@@ -57,15 +56,15 @@ public class TeacherInit {
     {
         sortTeachersByName();
         for(Teacher t : getTeachers()){
-            System.out.println(t.getTeacherName());
+            System.out.println(t.getName());
         }
     }
 
     public static Teacher getTeacherObjectFromName(String name)
     {
         Teacher teacher = null;
-        for(Teacher t : TeacherInit.getTeachers()){
-            if(t.getTeacherName().equals(name)){
+        for(Teacher t : People.getTeachers()){
+            if(t.getName().equals(name)){
                 teacher = t;
                 return teacher;
             }

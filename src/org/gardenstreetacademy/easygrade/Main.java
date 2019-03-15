@@ -3,7 +3,7 @@ package org.gardenstreetacademy.easygrade;
 import org.gardenstreetacademy.easygrade.classitems.Assignment;
 import org.gardenstreetacademy.easygrade.classitems.Classroom;
 import org.gardenstreetacademy.easygrade.init.AssignmentInit;
-import org.gardenstreetacademy.easygrade.init.TeacherInit;
+import org.gardenstreetacademy.easygrade.init.People;
 import org.gardenstreetacademy.easygrade.people.Teacher;
 
 public class Main
@@ -27,7 +27,7 @@ public class Main
             System.out.println(a.getAssignmentClass().getName() + " Period " + a.getAssignmentClass().getClassPeriod() + ": " + a.getName());
         }
 
-        TeacherInit.printTeacherList();
+        People.printTeacherList();
 
 
 

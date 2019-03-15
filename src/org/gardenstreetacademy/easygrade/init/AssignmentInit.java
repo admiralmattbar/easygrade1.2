@@ -40,7 +40,7 @@ public class AssignmentInit {
         if(readerAssignmentClass.hasNextLine())className = readerAssignmentClass.nextLine();
 
         if (assignmentName != null && !assignmentName.equals("")) {
-            for(Classroom c : ClassroomsInit.getClassesArray()){
+            for(Classroom c : Classes.getClassesArray()){
                 if(c.getName().equals(className)){
                     new Assignment(assignmentName, c);
                 }
@@ -56,7 +56,7 @@ public class AssignmentInit {
     public static void addAssignmentToAllClassesByName(String assignmentName, String className)
     {
         if (assignmentName != null && !assignmentName.equals("")) {
-            for (Classroom c : ClassroomsInit.getClassesArray()) {
+            for (Classroom c : Classes.getClassesArray()) {
                 if (c.getName().equals(className)) {
                     new Assignment(assignmentName, c);
                 }
@@ -71,7 +71,7 @@ public class AssignmentInit {
         ArrayList<Assignment> assignmentWithName = new ArrayList<Assignment>();
 
         int i;
-        for(i=0; i<ClassroomsInit.getClassesArray().size(); i++) {
+        for(i=0; i<Classes.getClassesArray().size(); i++) {
             if(assignments.get(i).getAssignmentName().equals(assignment_name) && ){
                 assignmentWithName.add(assignments.get(i));
             }
