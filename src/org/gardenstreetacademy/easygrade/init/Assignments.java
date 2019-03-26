@@ -5,7 +5,7 @@ import org.gardenstreetacademy.easygrade.classitems.Classroom;
 
 import java.util.*;
 
-public class AssignmentInit {
+public class Assignments {
 
     private static List<Assignment> assignments = new ArrayList<>();
 

@@ -22,11 +22,10 @@ public class Classroom extends ClassItem
         this. class_period = period;
         this.teacher = teacher;
 
-        if(DataManager.isTeacherFreePeriodFlag(this)) {
+        if(DataManager.checkTeacherAvailableFlag(this)) {
             Classes.addClassToArray(this);
         } else {
             System.out.println("This teacher is booked that period in another class. Please try again.");
-            this.equals(null);
         }
     }
 
@@ -37,11 +36,11 @@ public class Classroom extends ClassItem
         this.teacher = People.getTeacherObjectFromName(teacher);
 
 
-        if(DataManager.isTeacherFreePeriodFlag(this)) {
+        if(DataManager.checkTeacherAvailableFlag(this)) {
             Classes.addClassToArray(this);
         } else {
             System.out.println("This teacher is booked that period in another class. Please try again.");
-            this.equals(null);
+
         }
     }
 

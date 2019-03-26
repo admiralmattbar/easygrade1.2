@@ -1,13 +1,11 @@
 package org.gardenstreetacademy.easygrade.people;
 
-import org.gardenstreetacademy.easygrade.classitems.ClassItem;
-
-public abstract class PeopleItem {
+public abstract class Person {
 
     String name;
     private int unique_number;
 
-    public PeopleItem(String name)
+    public Person(String name)
     {
         this.name = name;
 
@@ -38,6 +36,6 @@ public abstract class PeopleItem {
         this.name = name;
     }
 
-    public abstract void addToArray(PeopleItem ci);
+    public abstract void addToArray(Person ci);
 
 }

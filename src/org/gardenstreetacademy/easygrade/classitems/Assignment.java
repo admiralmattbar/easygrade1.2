@@ -1,6 +1,6 @@
 package org.gardenstreetacademy.easygrade.classitems;
 
-import org.gardenstreetacademy.easygrade.init.AssignmentInit;
+import org.gardenstreetacademy.easygrade.init.Assignments;
 import org.gardenstreetacademy.easygrade.init.Classes;
 import org.gardenstreetacademy.easygrade.people.Teacher;
 
@@ -51,7 +51,7 @@ public class Assignment extends ClassItem{
 
     @Override
     public void addToArray(ClassItem ci) {
-        AssignmentInit.addAssignmentToArray(this);
+        Assignments.addAssignmentToArray(this);
     }
 
     public int getTotalScore()
