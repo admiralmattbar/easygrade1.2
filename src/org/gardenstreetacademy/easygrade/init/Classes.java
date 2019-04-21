@@ -56,10 +56,8 @@ public class Classes
         if (className != null && !className.equals("")) {
 
             if(teacherName != null && !teacherName.equals("")){
-                new Classroom(className, per, (Teacher) null); //TODO: handle teacher name in this function.
+                new Classroom(className, per, teacherName);
             }
-
-
         } else {
             System.out.println("Please give your new classitems a name.");
             readerName.nextLine();

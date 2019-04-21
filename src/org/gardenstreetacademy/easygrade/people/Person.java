@@ -1,9 +1,16 @@
 package org.gardenstreetacademy.easygrade.people;
 
+import org.gardenstreetacademy.easygrade.classitems.Classroom;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Person {
 
     String name;
     private int unique_number;
+
+    private List<Classroom> classes = new ArrayList<Classroom>();
 
     public Person(String name)
     {
@@ -37,5 +44,15 @@ public abstract class Person {
     }
 
     public abstract void addToArray(Person ci);
+
+    public List<Classroom> getPersonClasses()
+    {
+        return classes;
+    }
+
+    public void addClassToPerson(Classroom c)
+    {
+        classes.add(c);
+    }
 
 }

@@ -1,6 +1,7 @@
 package org.gardenstreetacademy.easygrade.people;
 
 import org.gardenstreetacademy.easygrade.classitems.Classroom;
+import org.gardenstreetacademy.easygrade.init.People;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +19,9 @@ public class Teacher extends Person {
         return teachersClasses;
     }
 
+    @Override
     public void addToArray(Person pi)
     {
-        org.gardenstreetacademy.easygrade.init.People.addTeacherToArray((Teacher) pi);
+        People.addTeacherToArray((Teacher) pi);
     }
 }

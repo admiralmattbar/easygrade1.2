@@ -2,6 +2,7 @@ package org.gardenstreetacademy.easygrade.util;
 
 import org.gardenstreetacademy.easygrade.classitems.Classroom;
 import org.gardenstreetacademy.easygrade.init.Classes;
+import org.gardenstreetacademy.easygrade.people.Student;
 
 public class DataManager {
 
@@ -15,13 +16,13 @@ public class DataManager {
         return true;
     }
 
-    public static boolean checkStudentAvailableFlag(Classroom classroom)
+    public static boolean checkStudentAvailableFlag(Classroom classroom, Student student)
     {
-
-        for(Classroom c : Classes.getClassesArray()){
-
+        for(Classroom c : student.getPersonClasses()){
+            if(c.getClassPeriod() == classroom.getClassPeriod()){
+                return false;
+            }
         }
-
         return true;
     }
 

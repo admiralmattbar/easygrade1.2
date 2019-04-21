@@ -2,6 +2,7 @@ package org.gardenstreetacademy.easygrade.classitems;
 
 import org.gardenstreetacademy.easygrade.init.Classes;
 import org.gardenstreetacademy.easygrade.init.People;
+import org.gardenstreetacademy.easygrade.people.Person;
 import org.gardenstreetacademy.easygrade.people.Teacher;
 import org.gardenstreetacademy.easygrade.util.DataManager;
 
@@ -22,11 +23,15 @@ public class Classroom extends ClassItem
         this. class_period = period;
         this.teacher = teacher;
 
+        /*
         if(DataManager.checkTeacherAvailableFlag(this)) {
             Classes.addClassToArray(this);
         } else {
             System.out.println("This teacher is booked that period in another class. Please try again.");
         }
+        */
+        Classes.addClassToArray(this);
+        addClassToTeacher(this.teacher);
     }
 
     public Classroom(String name, int period, String teacher)
@@ -35,13 +40,18 @@ public class Classroom extends ClassItem
         this. class_period = period;
         this.teacher = People.getTeacherObjectFromName(teacher);
 
-
+        /*
         if(DataManager.checkTeacherAvailableFlag(this)) {
             Classes.addClassToArray(this);
         } else {
             System.out.println("This teacher is booked that period in another class. Please try again.");
 
         }
+        */
+
+        Classes.addClassToArray(this);
+
+        addClassToTeacher(this.teacher);
     }
 
     public int getClassPeriod()
@@ -55,7 +65,7 @@ public class Classroom extends ClassItem
         Classes.addClassToArray(this);
     }
 
-    public void addAssignmentToThisClass(Assignment assignment)
+    public void addAssignmentToAllClassesWithName(Assignment assignment)
     {
         for(Assignment a : this.assignments_for_class){
             if(a.getName().equals(assignment.getName())){
@@ -98,6 +108,11 @@ public class Classroom extends ClassItem
     public Teacher getTeacher()
     {
         return teacher;
+    }
+
+    private void addClassToTeacher(Teacher t)
+    {
+        t.addClassToPerson(this);
     }
 
 }
