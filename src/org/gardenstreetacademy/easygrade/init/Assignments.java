@@ -83,7 +83,7 @@ public class Assignments {
     }
     */
 
-    public static ArrayList<Assignment> findAssignmentByName(String name)
+    public static ArrayList<Assignment> findAssignmentsWithName(String name)
     {
         ArrayList<Assignment> assignmentWithName = new ArrayList<Assignment>();
         for(Assignment a : assignments){
@@ -113,7 +113,7 @@ public class Assignments {
     public static void printAssignmentsWithName(String name)
     {
         ArrayList<Assignment> assignWithName = new ArrayList<Assignment>();
-        assignWithName = findAssignmentByName(name);
+        assignWithName = findAssignmentsWithName(name);
         for(Assignment a : assignWithName){
             System.out.println("Period " + a.getAssignmentClassroom().getName() + ".  " + a.getName());
         }

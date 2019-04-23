@@ -1,6 +1,8 @@
 package org.gardenstreetacademy.easygrade.init;
 
+import org.gardenstreetacademy.easygrade.classitems.Assignment;
 import org.gardenstreetacademy.easygrade.classitems.Classroom;
+import org.gardenstreetacademy.easygrade.people.Student;
 import org.gardenstreetacademy.easygrade.people.Teacher;
 
 import java.util.*;
@@ -102,4 +104,5 @@ public class Classes
         }
         return classes_during_period;
     }
+
 }

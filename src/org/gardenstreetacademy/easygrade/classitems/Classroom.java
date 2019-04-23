@@ -3,6 +3,7 @@ package org.gardenstreetacademy.easygrade.classitems;
 import org.gardenstreetacademy.easygrade.init.Classes;
 import org.gardenstreetacademy.easygrade.init.People;
 import org.gardenstreetacademy.easygrade.people.Person;
+import org.gardenstreetacademy.easygrade.people.Student;
 import org.gardenstreetacademy.easygrade.people.Teacher;
 import org.gardenstreetacademy.easygrade.util.DataManager;
 
@@ -15,6 +16,7 @@ public class Classroom extends ClassItem
     private Teacher teacher;
     private int class_period;
     private List<Assignment> assignments_for_class = new ArrayList<>();
+    private List<Student> students_in_class = new ArrayList<Student>();
 
 
     public Classroom(String name, int period, Teacher teacher)
@@ -113,6 +115,14 @@ public class Classroom extends ClassItem
     private void addClassToTeacher(Teacher t)
     {
         t.addClassToPerson(this);
+    }
+
+    public void addStudentToClass(Student student)
+    {
+        students_in_class.add(student);
+        for(Assignment a : this.assignments_for_class) {
+            student.gradeStudentAssignment(a, null);
+        }
     }
 
 }

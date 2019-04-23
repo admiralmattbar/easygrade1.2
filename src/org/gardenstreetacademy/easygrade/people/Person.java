@@ -2,45 +2,53 @@ package org.gardenstreetacademy.easygrade.people;
 
 import org.gardenstreetacademy.easygrade.classitems.Classroom;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Person {
 
     String name;
-    private int unique_number;
+    LocalDate birthday;
+
+    private String id;
 
     private List<Classroom> classes = new ArrayList<Classroom>();
 
     public Person(String name)
     {
         this.name = name;
-
         addToArray(this);
     }
 
-    public void setUniqueNum(int num){
-        unique_number = num;
+    public Person(String name, LocalDate birthday)
+    {
+        this(name);
+        this.birthday = birthday;
+
     }
+
+    public Person(String name, int year, short month, short day)
+    {
+        this(name);
+        this.birthday = LocalDate.of(year, month, day);
+
+    }
+
 
     public String getName()
     {
         return this.name;
     }
 
-    public int getUniqueNumber()
+    public String getId()
     {
-        return this.unique_number;
+        return this.id;
     }
 
-    public void setUniqueNumber(int num)
+    public void setId()
     {
-        this.unique_number = num;
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
+        if(!this.name.equals(null) && !this.birthday.equals(null)) this.id = name+"_"+birthday.toString();
     }
 
     public abstract void addToArray(Person ci);
