@@ -34,10 +34,15 @@ public class Student extends Person
     {
         Map assignment_grades_in_class = new HashMap<Assignment, Integer>();
         for(Assignment a : assignment_grades.keySet()){
-            if(a.getAssignmentClass().equals(c)){
-
+            if(a.getAssignmentClassroom().equals(c)){
+                assignment_grades_in_class.put(a, assignment_grades.get(a));
             }
         }
         return assignment_grades_in_class;
+    }
+
+    public void gradeStudentAssignment(Assignment a, Integer grade)
+    {
+        assignment_grades.put(a, grade);
     }
 }

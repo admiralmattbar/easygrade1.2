@@ -95,12 +95,27 @@ public class Assignments {
         return assignmentWithName;
     }
 
+    public static Assignment findUniqueAssignmentWithStrings(String name, String classname, int period, String teacher)
+    {
+        int i = 0;
+        for(Assignment a : assignments){
+            if(a.getName().equals(name)
+                    && a.getAssignmentClassroom().getName().equals(classname)
+                    && a.getAssignmentClassroom().getClassPeriod() == period
+                    && a.getAssignmentClassroom().getTeacher().getName().equals(teacher)){
+                i = assignments.indexOf(a);
+            }
+        }
+
+        return assignments.get(i);
+    }
+
     public static void printAssignmentsWithName(String name)
     {
         ArrayList<Assignment> assignWithName = new ArrayList<Assignment>();
         assignWithName = findAssignmentByName(name);
         for(Assignment a : assignWithName){
-            System.out.println("Period " + a.getAssignmentClass().getName() + ".  " + a.getName());
+            System.out.println("Period " + a.getAssignmentClassroom().getName() + ".  " + a.getName());
         }
     }
 }

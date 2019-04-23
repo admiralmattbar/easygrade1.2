@@ -44,7 +44,7 @@ public class Assignment extends ClassItem{
         }
     }
 
-    public Classroom getAssignmentClass()
+    public Classroom getAssignmentClassroom()
     {
         return assignment_class;
     }
@@ -54,7 +54,7 @@ public class Assignment extends ClassItem{
         Assignments.addAssignmentToArray(this);
     }
 
-    public int getTotalScore()
+    public int getMaxScore()
     {
         return this.max_score;
     }

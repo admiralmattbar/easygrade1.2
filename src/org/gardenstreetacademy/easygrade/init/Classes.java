@@ -91,4 +91,15 @@ public class Classes
             System.out.println("Period " + c.getClassPeriod() + ".  " + c.getName());
         }
     }
+
+    public List<Classroom> getClassesInPeriod(int period)
+    {
+        List<Classroom> classes_during_period = new ArrayList<Classroom>();
+        for(Classroom c : classes){
+            if(c.getClassPeriod() == period){
+                classes_during_period.add(c);
+            }
+        }
+        return classes_during_period;
+    }
 }

@@ -23,14 +23,6 @@ public class Main
         Assignments.addAssignmentToAllClassesByName("Notebook", "World History");
 
 
-        for(Assignment a : Assignments.getAssignmentsArray()){
-            System.out.println(a.getAssignmentClass().getName() + " Period " + a.getAssignmentClass().getClassPeriod() + ": " + a.getName());
-        }
-
-        People.printTeacherList();
-
-
-
     }
 
 }
