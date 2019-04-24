@@ -11,7 +11,8 @@ public class Teacher extends Person {
     private List<Classroom> teachersClasses = new ArrayList<Classroom>();
 
     public Teacher(String name) {
-        super(name);
+        this.name = name;
+        addToArray(this);
     }
 
     public List<Classroom> getTeachersClasses()

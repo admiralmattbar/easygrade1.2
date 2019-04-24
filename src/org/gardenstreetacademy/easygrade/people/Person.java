@@ -8,33 +8,14 @@ import java.util.List;
 
 public abstract class Person {
 
-    String name;
-    LocalDate birthday;
+    protected String name;
+    protected LocalDate birthday;
 
-    private String id;
+    protected String id;
 
-    private List<Classroom> classes = new ArrayList<Classroom>();
+    protected List<Classroom> classes = new ArrayList<Classroom>();
 
-    public Person(String name)
-    {
-        this.name = name;
-        addToArray(this);
-    }
-
-    public Person(String name, LocalDate birthday)
-    {
-        this(name);
-        this.birthday = birthday;
-
-    }
-
-    public Person(String name, int year, short month, short day)
-    {
-        this(name);
-        this.birthday = LocalDate.of(year, month, day);
-
-    }
-
+    public Person(){}
 
     public String getName()
     {
@@ -61,6 +42,20 @@ public abstract class Person {
     public void addClassToPerson(Classroom c)
     {
         classes.add(c);
+    }
+
+    public boolean hasId()
+    {
+        if(this.id.equals(null)){
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public LocalDate getBirthday()
+    {
+        return birthday;
     }
 
 }

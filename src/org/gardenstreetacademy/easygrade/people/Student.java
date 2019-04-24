@@ -5,6 +5,7 @@ import org.gardenstreetacademy.easygrade.classitems.Assignment;
 import org.gardenstreetacademy.easygrade.classitems.Classroom;
 import org.gardenstreetacademy.easygrade.init.People;
 
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,9 +14,22 @@ public class Student extends Person
 {
     private Map<Assignment, Integer> assignment_grades = new HashMap<Assignment, Integer>();
 
-    public Student(String name) {
-        super(name);
+    public Student(String name)
+    {
+        this.name = name;
         addToArray(this);
+    }
+
+    public Student(String name, LocalDate birthday)
+    {
+        this(name);
+        this.birthday = birthday;
+        this.setId();
+    }
+
+    public Student(String name, int birthyear, short birthmonth, short birthday)
+    {
+        this(name, LocalDate.of(birthyear, birthmonth, birthday));
     }
 
     @Override
