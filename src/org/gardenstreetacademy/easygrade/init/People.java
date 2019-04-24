@@ -125,7 +125,11 @@ public class People {
             if(userAddTeacher.equals("y")){
                 System.out.println("Adding teacher '" + name + "' to database.");
                 return new Teacher(name);
-
+            } else {
+                Scanner scan_new_name = new Scanner(System.in);
+                System.out.println("Please enter a new name for the teacher.");
+                String store_new_name = scan_new_name.nextLine();
+                getTeacherObjectFromName(store_new_name);
             }
 
         }

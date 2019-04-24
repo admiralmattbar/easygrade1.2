@@ -27,9 +27,15 @@ public class Student extends Person
         this.setId();
     }
 
-    public Student(String name, int birthyear, short birthmonth, short birthday)
+    public Student(String name, int birthyear, int birthmonth, int birthday)
     {
-        this(name, LocalDate.of(birthyear, birthmonth, birthday));
+        this(name);
+        if(birthmonth < 13 && birthday < 32 && birthyear > 1900 && birthyear < LocalDate.now().getYear()){
+            this.birthday = LocalDate.of(birthyear, (short) birthmonth, (short) birthday);
+        } else {
+            System.out.println("Please enter a valid date.");
+        }
+        this.setId();
     }
 
     @Override

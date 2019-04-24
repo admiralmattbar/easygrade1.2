@@ -12,7 +12,7 @@ public class Main
 
     public static void main(String args[])
     {
-        Student stu = new Student("Stu", 2001, (short)2, (short)21);
+        Student stu = new Student("Stu", 2001, 2, 21);
 
         Teacher matt = new Teacher("Matt");
         Teacher arnold = new Teacher("Arnold");
