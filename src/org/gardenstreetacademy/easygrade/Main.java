@@ -12,7 +12,7 @@ public class Main
 
     public static void main(String args[])
     {
-        Student stu = new Student("Stu", 2001, 2, 21);
+        Student stu = new Student("Stu", 2001, 12, 21);
 
         Teacher matt = new Teacher("Matt");
         Teacher arnold = new Teacher("Arnold");
@@ -20,13 +20,25 @@ public class Main
         Classroom algebra = new Classroom("Algebra", 4, arnold);
         Classroom world_history = new Classroom("World History", 1, "Matt");
         Classroom world_history2 = new Classroom("World History", 2, "Matt");
-        Classroom government = new Classroom("Government", 4, "Octavian");
+        //Classroom government = new Classroom("Government", 4, "Octavian");
 
         Assignments.addAssignmentToAllClassesByName("Notebook", "World History");
 
-        for(Student s : People.getStudents()){
-            System.out.println("Student Name: " + s.getName() + "   Birthday: " + s.getBirthday() + "    Id: " + s.getId());
+        world_history.addStudentToClass(stu);
+
+        for(Student s : world_history.getStudentsInClass()) {
+            System.out.println(s.getName());
         }
+
+        for(Assignment a : world_history.getAssignmentsForClass()){
+            System.out.println(a.getName());
+        }
+
+        for(Assignment a : stu.getGrades().keySet()){
+            System.out.println(a.getName());
+        }
+        System.out.println(stu.getGrades().keySet().size());
+
     }
 
 }

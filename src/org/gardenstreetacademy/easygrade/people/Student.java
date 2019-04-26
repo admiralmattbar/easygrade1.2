@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class Student extends Person
 {
-    private Map<Assignment, Integer> assignment_grades = new HashMap<Assignment, Integer>();
+    private Map<Assignment, Float> assignment_grades = new HashMap<Assignment, Float>();
 
     public Student(String name)
     {
@@ -25,17 +25,18 @@ public class Student extends Person
         this(name);
         this.birthday = birthday;
         this.setId();
+
     }
 
     public Student(String name, int birthyear, int birthmonth, int birthday)
     {
         this(name);
-        if(birthmonth < 13 && birthday < 32 && birthyear > 1900 && birthyear < LocalDate.now().getYear()){
+        if(birthmonth < 13 && birthday < 32 && birthyear > 1900 && birthyear <= LocalDate.now().getYear()){
             this.birthday = LocalDate.of(birthyear, (short) birthmonth, (short) birthday);
+            this.setId();
         } else {
             System.out.println("Please enter a valid date.");
         }
-        this.setId();
     }
 
     @Override
@@ -43,11 +44,11 @@ public class Student extends Person
         People.addStudentToArray((Student)ci);
     }
 
-    public Map getGrades(){
+    public Map<Assignment, Float> getGrades(){
         return assignment_grades;
     }
 
-    public Map getGradesByClass(Classroom c)
+    public Map<Assignment, Float> getGradesByClass(Classroom c)
     {
         Map assignment_grades_in_class = new HashMap<Assignment, Integer>();
         for(Assignment a : this.assignment_grades.keySet()){
@@ -58,7 +59,7 @@ public class Student extends Person
         return assignment_grades_in_class;
     }
 
-    public void gradeStudentAssignment(Assignment a, Integer grade)
+    public void gradeStudentAssignment(Assignment a, Float grade)
     {
         this.assignment_grades.put(a, grade);
     }

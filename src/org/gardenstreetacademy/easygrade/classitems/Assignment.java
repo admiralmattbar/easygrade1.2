@@ -13,13 +13,14 @@ public class Assignment extends ClassItem{
     private int unique_assignment_number;
     private int class_period;
     List<Classroom> classWithAssignment;
+
     private int max_score;
 
     public Assignment(String name, Classroom classroom)
     {
         super(name);
         this.assignment_class = classroom;
-        classroom.addAssignmentToAllClassesWithName(this);
+        classroom.addAssignmentToArrayForClassroom(this);
     }
 
     public Assignment(String name, String classname, int period, Teacher teacher)
@@ -28,10 +29,11 @@ public class Assignment extends ClassItem{
         this.class_period = period;
         for(Classroom c : Classes.getClassesArray()){
             if(c.getName().equals(classname) && c.getClassPeriod() == period && c.getTeacher().equals(teacher)) {
-                c.addAssignmentToAllClassesWithName(this);
+                c.addAssignmentToArrayForClassroom(this);
             }
         }
     }
+
 
     public Assignment(String name, String classname, int period, String teachername)
     {
@@ -39,10 +41,11 @@ public class Assignment extends ClassItem{
         this.class_period = period;
         for(Classroom c : Classes.getClassesArray()){
             if(c.getName().equals(classname) && c.getClassPeriod() == period && c.getTeacherName().equals(teachername)) {
-                c.addAssignmentToAllClassesWithName(this);
+                c.addAssignmentToArrayForClassroom(this);
             }
         }
     }
+
 
     public Classroom getAssignmentClassroom()
     {
@@ -59,7 +62,7 @@ public class Assignment extends ClassItem{
         return this.max_score;
     }
 
-    public void setTotalScore(int score)
+    public void setMaxScore(int score)
     {
         this.max_score = score;
     }

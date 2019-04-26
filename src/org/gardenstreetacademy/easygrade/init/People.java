@@ -23,6 +23,7 @@ public class People {
         return students;
     }
 
+    /*
     public static void createStudent(String name)
     {
         for(Student s : students) {
@@ -46,6 +47,7 @@ public class People {
             }
         }
     }
+    */
 
     public static void addStudentToArray(Student student)
     {
@@ -140,7 +142,7 @@ public class People {
     public static Student getStudentObjectFromName(String name)
     {
         Student student = null;
-        for(Student s : People.getStudents()){
+        for(Student s : students){
             if(s.getName().equals(name)){
                 student = s;
                 return student;
@@ -152,7 +154,7 @@ public class People {
             String userAddStudent = addStudentReader.nextLine();
 
             if(userAddStudent.toLowerCase().equals("y")){
-                System.out.println("Adding teacher '" + name + "' to database.");
+                System.out.println("Adding student '" + name + "' to database.");
                 return new Student(name);
 
             } else if (userAddStudent.toLowerCase().equals("n")){

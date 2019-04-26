@@ -67,6 +67,15 @@ public class Classroom extends ClassItem
         Classes.addClassToArray(this);
     }
 
+    public void addAssignmentToArrayForClassroom(Assignment a)
+    {
+        this.assignments_for_class.add(a);
+        //this.addAssignmentToAllStudentsInClassroom(a);
+    }
+
+
+    //What is this?
+    /*
     public void addAssignmentToAllClassesWithName(Assignment assignment)
     {
         for(Assignment a : this.assignments_for_class){
@@ -77,6 +86,7 @@ public class Classroom extends ClassItem
         }
         assignments_for_class.add(assignment);
     }
+    */
 
     public Assignment findAssignmentInThisClass(String assignment_name)
     {
@@ -122,6 +132,18 @@ public class Classroom extends ClassItem
         students_in_class.add(student);
         for(Assignment a : this.assignments_for_class) {
             student.gradeStudentAssignment(a, null);
+        }
+    }
+
+    public List<Student> getStudentsInClass()
+    {
+        return this.students_in_class;
+    }
+
+    public void addAssignmentToAllStudentsInClassroom(Assignment a)
+    {
+        for(Student s : this.students_in_class){
+            s.gradeStudentAssignment(a, null);
         }
     }
 

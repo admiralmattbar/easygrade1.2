@@ -2,6 +2,7 @@ package org.gardenstreetacademy.easygrade.init;
 
 import org.gardenstreetacademy.easygrade.classitems.Assignment;
 import org.gardenstreetacademy.easygrade.classitems.Classroom;
+import org.gardenstreetacademy.easygrade.people.Student;
 
 import java.util.*;
 
@@ -61,8 +62,14 @@ public class Assignments {
                     new Assignment(assignmentName, c);
                 }
             }
-
         }
+    }
+
+    public float getIndividualGradePercent(Student s, Assignment a)
+    {
+        int max_score = a.getMaxScore();
+        Float student_score = (Float)s.getGrades().get(a);
+        return (student_score/(float)max_score);
     }
 
     /*
